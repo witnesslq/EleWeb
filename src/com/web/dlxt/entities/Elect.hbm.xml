@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.web.dlxt.entities.Elect" table="elects" catalog="elesys">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="uid" type="java.lang.String">
+            <column name="uid" length="20" />
+        </property>
+        <property name="pwd" type="java.lang.String">
+            <column name="pwd" length="20" />
+        </property>
+        <property name="cname" type="java.lang.String">
+            <column name="cname" length="40" />
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="type" length="20" />
+        </property>
+        <property name="prequan" type="java.lang.Float">
+            <column name="prequan" precision="12" scale="0"  />
+        </property>
+        <property name="thisquan" type="java.lang.Float">
+            <column name="thisquan" precision="12" scale="0"  />
+        </property>
+        <property name="location" type="java.lang.String">
+            <column name="location" length="100" />
+        </property>
+        <property name="genset" type="java.lang.String">
+            <column name="genset" length="40" />
+        </property>
+        <property name="pic" type="java.lang.String">
+            <column name="pic" length="20" />
+        </property>
+        <property name="dir" type="java.lang.String">
+            <column name="dir" length="20" />
+        </property>
+        <property name="des" type="java.lang.String">
+            <column name="des" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

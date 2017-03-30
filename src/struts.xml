@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd" >
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<package name="com.web.dlxt.action" extends="json-default">
+		<action name="userLoginAction" class="com.web.dlxt.action.UserAction" method="userLogin">
+			<result type="json" />
+		</action>
+		<action name="userAddAction" class="com.web.dlxt.action.UserAction" method="userAdd">
+			<result type="json">
+				<param name="includeProperties">message</param>
+			</result>
+			<result name="error" type="json">
+				<param name="includeProperties">message</param>
+			</result>
+		</action>
+		<action name="userReleaseRequireQuanAction" class="com.web.dlxt.action.UserAction" method="releaseRequire">
+			<result type="json">
+				<param name="includeProperties">message</param>
+			</result>
+			<result name="error" type="json">
+				<param name="includeProperties">message</param>
+			</result>
+		</action>
+		
+		
+		<action name="electLoginAction" class="com.web.dlxt.action.ElectAction" method="electLogin">
+			<result type="json" />
+		</action>
+		<action name="electAddAction" class="com.web.dlxt.action.ElectAction" method="electAdd">
+			<result type="json">
+				<param name="includeProperties">message</param>
+			</result>
+			<result name="error" type="json">
+				<param name="includeProperties">message</param>
+			</result>
+		</action>
+		<action name="getElectByEidAction" class="com.web.dlxt.action.ElectAction" method="getElectByEid">
+			<result type="json"/>
+		</action>
+		
+		
+		<action name="recommendAction" class="com.web.dlxt.action.RecommendAction" method="recommendElect">
+			<result type="json"/>
+		</action>
+		
+	</package>
+</struts>
+
+
+
